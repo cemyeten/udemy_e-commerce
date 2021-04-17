@@ -1,9 +1,9 @@
-﻿using API.data.DataContext;
-using API.data.DbModels;
+﻿
+using API.Core.DbModels;
+using API.Infastructure.DataContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace API.Controllers
