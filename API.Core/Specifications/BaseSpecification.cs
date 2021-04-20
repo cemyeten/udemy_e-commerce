@@ -5,9 +5,13 @@ using System.Linq.Expressions;
 
 namespace API.Core.Specifications
 {
-    public class BaseSpesification<T> : ISpesification<T>
+    public class BaseSpecification<T> : ISpecification<T>
     {
-        public BaseSpesification(Expression<Func<T,bool>> criteria)
+        public BaseSpecification()
+        {
+
+        }
+        public BaseSpecification(Expression<Func<T,bool>> criteria)
         {
             Criteria = criteria;
         }

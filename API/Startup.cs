@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using API.Infastructure.DataContext;
 using API.Core.Interfaces;
 using API.Infastructure.Implements;
+using API.Helpers;
 
 namespace API
 {
@@ -25,6 +26,7 @@ namespace API
         {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>),(typeof(GenericRepository<>)));
+            services.AddAutoMapper(typeof(MappingProfiles));
 
             services.AddControllers();
             services.AddDbContext<StoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
